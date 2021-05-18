@@ -104,7 +104,20 @@ for year in nvd_years:
             V3_cvssv3_attackComplexity = deep_get(i, ['impact', 'baseMetricV3', 'cvssV3', 'attackComplexity'])
             V3_cvssv3_privilegesRequired = deep_get(i, ['impact', 'baseMetricV3', 'cvssV3', 'privilegesRequired'])
             V3_cvssv3_confidentialityImpact = deep_get(i, ['impact', 'baseMetricV3', 'cvssV3', 'confidentialityImpact'])
-            file.write('"' + str(cve_id) + '"' + ','  + '"' + str(V2_cvssv2_vector_string) + '"' + ',' + '"' + str(V3_cvssv3_vector_stringV3) + '"' + ',' + '"' + str(V2_severity) + '"' + ',' + '"' + str(V2_obtainUserPrivilege) + '"' + ',' + '"' + str(V2_userInteractionRequired) + '"' + ',' + '"' + str(V2_obtainOtherPrivilege) + '"' + ',' + '"' + str(V2_exploitabilityScore) + '"' + ',' + '"' + str(V2_cvssv2_accessComplexity) + '"' + ',' + '"' + str(V2_cvssv2_integrityImpact) + '"' + ',' + '"' + str(V2_cvssv2_integrityImpact) + '"' + ',' + '"' + str(V2_cvssv2_confidentialityImpact) + '"' + ',' + '"' + str(V3_exploitabilityScore) + '"' + ',' + '"' + str(V3_cvssv3_integrityImpact) + '"' + ',' + '"' + str(V3_cvssv3_attackComplexity) + '"' + ',' + '"' + str(V3_cvssv3_attackVector) + '"' + '\n')
+            file.write('"' + str(cve_id) + '"' + ','  + '"' + str(V2_cvssv2_vector_string)\
+                 + '"' + ',' + '"' + str(V3_cvssv3_vector_stringV3) + '"' + ',' + '"' + str(V2_severity)\
+                      + '"' + ',' + '"' + str(V2_obtainUserPrivilege) + '"' + ',' + '"' + str(V2_userInteractionRequired)\
+                           + '"' + ',' + '"' + str(V2_obtainOtherPrivilege) + '"' + ',' + '"' + str(V2_exploitabilityScore)\
+                                + '"' + ',' + '"' + str(V2_cvssv2_accessComplexity) + '"' + ',' + '"' + str(V2_cvssv2_integrityImpact)\
+                                     + '"' + ',' + '"' + str(V2_cvssv2_confidentialityImpact) + '"' + ',' + '"' + str(V2_cvssv2_baseScore)\
+                                          + '"' + ',' + '"' + str(V2_cvssv2_availabilityImpact) + '"' + ',' + '"' + str(V2_cvssv2_accessVector)\
+                                               + '"' + ',' + '"' + str(V2_cvssv2_authentication) + '"' + ',' + '"' + str(V3_exploitabilityScore)\
+                                                    + '"' + ',' + '"' + str(V3_impactScore) + '"' + ',' + '"' + str(V3_cvssv3_userInteraction)\
+                                                        + '"' + ',' + '"' + str(V3_cvssv3_integrityImpact) + '"' + ',' + '"' + str(V3_cvssv3_availabilityImpact)\
+                                                            + '"' + ',' + '"' + str(V3_cvssv3_attackVector) + '"' + ',' + '"' + str(V3_cvssv3_baseSeverity)\
+                                                                + '"' + ',' + '"' + str(V3_cvssv3_baseScore) + '"' + ',' + '"' + str(V3_cvssv3_scope)\
+                                                                    + '"' + ',' + '"' + str(V3_cvssv3_attackComplexity) + '"' + ',' + '"' + str(V3_cvssv3_privilegesRequired)\
+                                                                        + '"' + ',' + '"' + str(V3_cvssv3_confidentialityImpact) + '"' + '\n')
             #print(V3_cvssv3_baseScore, V3_cvssv3_baseSeverity)
             #file.write(str(V3_cvssv3_baseScore) + ',' + str(V3_cvssv3_baseSeverity) + '\n')
 file.close()
