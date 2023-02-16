@@ -1,6 +1,6 @@
 Script for making CSV file from National Vulnerability Database https://nvd.nist.gov/. You can use this CSV in Splunk for cve_id lookups. File vulners.csv will be uptated every 12 hours using Github Actions.
 
-Example of data from NVD
+Example data from NVD database
 ```
 {'baseMetricV2': {'cvssV2': {'accessComplexity': 'LOW',
                              'accessVector': 'LOCAL',
