@@ -98,6 +98,8 @@ for year in range(2017, int(current_year) + 1):
             final_dict['v3_cvss3_version'] = deep_get(i, ['impact', 'baseMetricV3', 'cvssV3', 'version'])
             w = csv.DictWriter(file, header)
             w.writerow(final_dict)
+            print(final_dict)
+            final_dict.clean()
 file.close()
 
 
