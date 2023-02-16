@@ -99,7 +99,7 @@ for year in range(2017, int(current_year) + 1):
             w = csv.DictWriter(file, header)
             w.writerow(final_dict)
             print(final_dict)
-            final_dict.clean()
+            final_dict.clear()
 file.close()
 
 
