@@ -1,1 +1,35 @@
 Script for making CSV file from National Vulnerability Database https://nvd.nist.gov/. You can use this CSV in Splunk for cve_id lookups. File vulners.csv will be uptated every 12 hours using Github Actions.
+
+Example of data from NVD
+```
+{'baseMetricV2': {'cvssV2': {'accessComplexity': 'LOW',
+                             'accessVector': 'LOCAL',
+                             'authentication': 'NONE',
+                             'availabilityImpact': 'COMPLETE',
+                             'baseScore': 7.2,
+                             'confidentialityImpact': 'COMPLETE',
+                             'integrityImpact': 'COMPLETE',
+                             'vectorString': 'AV:L/AC:L/Au:N/C:C/I:C/A:C',
+                             'version': '2.0'},
+                  'exploitabilityScore': 3.9,
+                  'impactScore': 10.0,
+                  'obtainAllPrivilege': False,
+                  'obtainOtherPrivilege': False,
+                  'obtainUserPrivilege': False,
+                  'severity': 'HIGH',
+                  'userInteractionRequired': False},
+ 'baseMetricV3': {'cvssV3': {'attackComplexity': 'LOW',
+                             'attackVector': 'LOCAL',
+                             'availabilityImpact': 'HIGH',
+                             'baseScore': 7.8,
+                             'baseSeverity': 'HIGH',
+                             'confidentialityImpact': 'HIGH',
+                             'integrityImpact': 'HIGH',
+                             'privilegesRequired': 'LOW',
+                             'scope': 'UNCHANGED',
+                             'userInteraction': 'NONE',
+                             'vectorString': 'CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H',
+                             'version': '3.0'},
+                  'exploitabilityScore': 1.8,
+                  'impactScore': 5.9}}
+```                  
