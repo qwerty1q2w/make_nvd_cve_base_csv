@@ -38,7 +38,7 @@ def get_and_extract_zip(file, year):
     except Exception as e:
         print(e)
 
-for year in range(2017, int(current_year) + 1):
+for year in range(2018, int(current_year) + 1):
     zip_file  = dir_path + str(year) + ".zip"
     get_and_extract_zip(zip_file, year)
 
